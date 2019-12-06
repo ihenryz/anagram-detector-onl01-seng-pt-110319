@@ -8,9 +8,9 @@ class Anagram
   end
 
   # find anagram matches given an array of words
-  def match(possible_anagrams)
-    possible_anagrams.select do |possible_anagram|
-      @word.split("").sort  == possible_anagram.split("").sort
+  def match(matched)
+    matched.select do |matched|
+      @word.split("").sort == possible_anagram.split("").sort
     end
   end
 end
