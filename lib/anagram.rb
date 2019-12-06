@@ -4,14 +4,12 @@ class Anagram
   attr_accessor :word
 
   def initialize(word)
-    # ⇓⇓⇓ HERE ⇓⇓⇓
     @letters = (@word = word).split("").sort
   end
 
   # find anagram matches given an array of words
   def match(possible_anagrams)
     possible_anagrams.select do |possible_anagram|
-      # ⇓⇓⇓ AND HERE ⇓⇓⇓
       @letters == possible_anagram.split("").sort
     end
   end
