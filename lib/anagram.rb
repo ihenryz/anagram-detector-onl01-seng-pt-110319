@@ -1,16 +1,18 @@
 require 'pry'
+class Anagram
+  
+  attr_accessor :word
 
-class Anagram 
-  
-  attr_accessor :string 
-  
-  def initialize(string)
-    @string = string
+  def initialize(word)
+    # ⇓⇓⇓ HERE ⇓⇓⇓
+    @letters = (@word = word).split("").sort
+  end
 
+  # find anagram matches given an array of words
+  def match(possible_anagrams)
+    possible_anagrams.select do |possible_anagram|
+      # ⇓⇓⇓ AND HERE ⇓⇓⇓
+      @letters == possible_anagram.split("").sort
+    end
   end
-  
-  def match(string_array)
-    binding.pry
-    
-  end
-end 
+end
