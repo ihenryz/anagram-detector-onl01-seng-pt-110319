@@ -6,10 +6,11 @@ class Anagram
   
   def initialize(string)
     @string = string
-    binding.pry
+
   end
   
   def match(string_array)
+    binding.pry
     
   end
 end 
