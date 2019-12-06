@@ -10,7 +10,7 @@ class Anagram
   # find anagram matches given an array of words
   def match(matched)
     matched.select do |matched|
-      @word.split("").sort == possible_anagram.split("").sort
+      possible_anagram.split("").sort == @word.split("").sort
     end
   end
 end
